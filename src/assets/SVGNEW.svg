@@ -1,0 +1,10 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='435' height='435' viewBox='0 0 800 800'>
+  <rect fill='#111C33' width='800' height='800'/>
+  <g fill='none' stroke='#400D6B' stroke-width='2.7'>
+    <!-- Existing paths -->
+  </g>
+  <g fill='#484F55' font-family='Arial, sans-serif' font-size='120' text-anchor='middle' letter-spacing='10'>
+    <!-- Existing circles -->
+    <text x='400' y='400' dy='.3em' fill='#000' stroke='#fff' stroke-width='10' font-weight='bold'>AIaaS</text>
+  </g>
+</svg>
