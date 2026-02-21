@@ -1,0 +1,117 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaShieldAlt, FaChartLine, FaCogs } from 'react-icons/fa';
+// Ensure bg-1.jpg is in your src/assets folder
+import bgImage from '../../assets/Europe.jpg';
+
+const IntroPage = () => {
+  return (
+    <div className="relative min-h-screen w-full flex items-center overflow-hidden font-Nunito">
+      
+      {/* 1. Background Image with Research-Grade Overlay */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        {/* Deep Sovereign Blue gradient to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001A4D] via-[#001A4D]/85 to-[#001A4D]/40" />
+      </div>
+
+      <div className="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 grid lg:grid-cols-2 gap-16 items-center w-full">
+        
+        {/* 2. Primary Narrative - Left Column */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="inline-flex items-center gap-2 bg-[#FFCC00]/10 border border-[#FFCC00]/30 text-[#FFCC00] px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-8 backdrop-blur-md">
+            <FaShieldAlt className="animate-pulse" /> EU Strategic Autonomy & Resilience
+          </div>
+          
+          <h1 className="text-6xl xl:text-8xl font-black text-white tracking-tighter leading-[0.85] mb-8">
+            TRACE<span className="text-[#FFCC00]">-</span>EU <br /> 
+            <span className="text-3xl xl:text-4xl font-light text-slate-300 tracking-normal block mt-4 italic">
+              Quantifying Causal Risk in Global Networks
+            </span>
+          </h1>
+
+          <p className="text-lg xl:text-xl text-slate-300 max-w-xl leading-relaxed mb-10 font-medium">
+            A Joint Topic-Stance framework designed to identify "Trigger-States" documented in unstructured text long before manifesting in physical trade data.
+          </p>
+
+          <div className="flex flex-wrap gap-6">
+            <button className="bg-[#FFCC00] hover:bg-yellow-500 text-[#003399] px-10 py-4 font-black text-xs uppercase tracking-[0.2em] transition-all shadow-2xl shadow-yellow-500/20 active:scale-95">
+              Explore Causal Engine
+            </button>
+            <button className="group flex items-center gap-3 text-white font-black text-xs uppercase tracking-[0.2em] border-b-2 border-transparent hover:border-[#FFCC00] transition-all py-2">
+              View Research Proposal <span className="group-hover:translate-x-2 transition-transform">→</span>
+            </button>
+            
+          </div>
+        </motion.div>
+
+        {/* 3. The "Signal Insight" - Right Column */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="relative lg:block hidden"
+        >
+          {/* Glassmorphism Logic Card */}
+          <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[40px] p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)]">
+            
+            <div className="flex justify-between items-center mb-12">
+              <div className="h-2 w-24 bg-gradient-to-r from-[#FFCC00] to-transparent rounded-full" />
+              <span className="text-[10px] font-mono text-blue-300 font-bold tracking-[0.3em] uppercase">
+                Model Status: Inference Active
+              </span>
+            </div>
+
+            <div className="space-y-10">
+              {/* Metric 1 */}
+              <div className="relative group">
+                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
+                  <FaChartLine className="text-[#FFCC00]" /> Trade Flow Nowcast [cite: 16]
+                </p>
+                <p className="text-4xl font-black text-white font-mono tracking-tighter">ΔV: -14.2%</p>
+                <div className="absolute -left-4 top-0 h-full w-0.5 bg-[#FFCC00] scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
+              </div>
+
+              {/* Metric 2 */}
+              <div className="relative group">
+                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
+                  <FaCogs className="text-blue-400" /> Stance Intensity (I) [cite: 5]
+                </p>
+                <p className="text-4xl font-black text-white font-mono tracking-tighter">0.88 Disruptive</p>
+              </div>
+            </div>
+
+            {/* Scientific Quote Footer */}
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-xs text-slate-400 leading-relaxed font-medium italic opacity-70">
+                "Moving beyond black-box prediction toward causal, interpretable forecasting for European economic resilience[cite: 57]."
+              </p>
+            </div>
+          </div>
+
+          {/* Abstract Floating Data Badge */}
+          <div className="absolute -top-6 -right-6 bg-[#003399] border border-white/20 p-5 rounded-2xl shadow-2xl rotate-3">
+             <p className="text-[9px] font-black text-[#FFCC00] uppercase tracking-widest mb-1">Causal Precision</p>
+             <p className="text-xl font-black text-white font-mono tracking-tighter">94.2%</p>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* 4. Bottom Attribution */}
+      <div className="absolute bottom-12 left-20 hidden xl:flex items-center gap-6">
+        <div className="h-[1px] w-20 bg-white/20" />
+        <span className="text-[10px] font-bold text-white/40 uppercase tracking-[0.5em]">
+          UCD School of Computer Science • PhD Research [cite: 127]
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export default IntroPage;

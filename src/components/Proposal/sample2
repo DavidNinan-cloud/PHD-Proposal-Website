@@ -1,0 +1,115 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaShieldAlt, FaChartLine, FaProjectDiagram } from 'react-icons/fa';
+// Import your background image from assets
+import bgImage from '../assets/bg-1.jpg'; 
+
+export default function IntroHero() {
+  return (
+    <div className="relative min-h-screen w-full flex items-center overflow-hidden font-Nunito">
+      
+      {/* 1. Background Image with Deep Overlay */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001A4D] via-[#001A4D]/80 to-transparent" />
+      </div>
+
+      <div className="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-16 grid lg:grid-cols-2 gap-12 items-center">
+        
+        {/* 2. Left Column: Authoritative Research Copy */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="inline-flex items-center gap-2 bg-[#FFCC00] text-[#003399] px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-8">
+            <FaShieldAlt /> EU Strategic Autonomy Initiative
+          </div>
+          
+          <h1 className="text-6xl xl:text-7xl font-black text-white tracking-tighter leading-[0.9] mb-8">
+            Trade Resilience <br /> 
+            <span className="text-[#FFCC00]">& Causal Evaluation.</span>
+          </h1>
+
+          <p className="text-xl text-slate-300 max-w-xl leading-relaxed mb-10 border-l-2 border-white/20 pl-6">
+            A Joint Topic-Stance (JTS) framework for mapping causal risk propagation across European Union trade networks. [cite: 1] 
+            Moving beyond black-box sentiment to provide interpretable "Nowcasts" of trade flow volatility. [cite: 7]
+          </p>
+
+          <div className="flex flex-wrap gap-6">
+            <button className="bg-[#FFCC00] hover:bg-yellow-500 text-[#003399] px-10 py-4 font-black text-xs uppercase tracking-widest transition-all shadow-xl shadow-yellow-500/10">
+              Launch Causal Engine
+            </button>
+            <button className="border border-white/30 text-white hover:bg-white/10 px-10 py-4 font-black text-xs uppercase tracking-widest transition-all">
+              Technical Abstract
+            </button>
+          </div>
+        </motion.div>
+
+        {/* 3. Right Column: The "Dashboard Facade" (Glassmorphism) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="relative"
+        >
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl overflow-hidden">
+            
+            {/* Live Model Indicator */}
+            <div className="flex justify-between items-center mb-10">
+              <div className="flex gap-1.5">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-600" />
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-600" />
+              </div>
+              <span className="text-[10px] font-mono text-emerald-400 font-bold uppercase tracking-widest">
+                Active: JTS_V1_Inference
+              </span>
+            </div>
+
+            {/* Simulated Data Points */}
+            <div className="space-y-8">
+              <div className="flex justify-between items-end border-b border-white/10 pb-4">
+                <div>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Causal Impact (ΔV)</p>
+                  <p className="text-3xl font-black text-white font-mono">-14.2%</p>
+                </div>
+                <FaChartLine className="text-[#FFCC00] text-2xl mb-1" />
+              </div>
+
+              <div className="flex justify-between items-end border-b border-white/10 pb-4">
+                <div>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Stance Intensity (I)</p>
+                  <p className="text-3xl font-black text-white font-mono">0.88</p>
+                </div>
+                <FaProjectDiagram className="text-blue-400 text-2xl mb-1" />
+              </div>
+            </div>
+
+            {/* Bottom Insight Widget */}
+            <div className="mt-10 p-4 bg-[#FFCC00]/10 rounded-xl border border-[#FFCC00]/20">
+              <p className="text-[10px] text-[#FFCC00] font-black uppercase mb-2">Real-Time Nowcast Insight</p>
+              <p className="text-xs text-white leading-relaxed italic opacity-80 font-serif">
+                "Linguistic signals in EC policy documents precede structural shifts in trade flows by T+14 days." [cite: 12, 16]
+              </p>
+            </div>
+          </div>
+
+          {/* Abstract floating "Node" for depth */}
+          <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-2xl hidden md:block">
+            <p className="text-[9px] font-black text-[#003399] uppercase mb-1">Reporting Gap</p>
+            <p className="text-lg font-black text-slate-800 font-mono">Minimized</p>
+          </div>
+        </motion.div>
+      </div>
+      
+      {/* 4. Bottom Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+        <span className="text-[9px] font-black text-white uppercase tracking-widest">Explore Framework</span>
+        <div className="w-px h-12 bg-white" />
+      </div>
+    </div>
+  );
+}
