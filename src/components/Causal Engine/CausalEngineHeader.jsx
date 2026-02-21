@@ -10,7 +10,7 @@ const CausalEngineHeader = () => {
   return (
     <>
 
-    <div className="bg-[#f8fafc] font-Nunito">
+    <div id='simulation' className="bg-[#f8fafc] font-Nunito">
       <div className="max-w-[1440px] mx-auto">
         
         {/* 1. Engine Control Header */}

@@ -5,11 +5,11 @@ import DataPortal from './DataPortal'
 
 export default function DataPortalRoute() {
   return (
-    <div>
-        <IntroPage details={'Data Ingestion Layer'} />     
-        <DataIngestion/>
+    <div id='data-portal'>
         <IntroPage details={'Data Portal'} />    
         <DataPortal/>
+        <IntroPage details={'Data Ingestion Layer'} />     
+        <DataIngestion/>
     </div>
   )
 }

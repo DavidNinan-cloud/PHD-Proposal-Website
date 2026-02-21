@@ -44,13 +44,13 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-24 pb-20 font-Nunito">
+    <div id='timeline' className="bg-slate-50 min-h-screen pt-12 pb-20 font-Nunito">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header Section */}
         <div className="text-center mb-20">
           <h2 className="text-[#003399] text-xs font-black uppercase tracking-[0.3em] mb-4">Strategic Roadmap</h2>
-          <h1 className="text-5xl font-black text-slate-800 tracking-tighter mb-6">UCD PhD Timeline: EU-Pulse</h1>
+          <h1 className="text-5xl font-black text-slate-800 tracking-tighter mb-6">PhD Timeline: EU-Pulse</h1>
           <p className="max-w-2xl mx-auto text-slate-500 font-medium">
             A 4-year technical execution plan for mapping causal trade resilience across European networks.
           </p>

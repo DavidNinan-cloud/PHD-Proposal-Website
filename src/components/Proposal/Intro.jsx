@@ -6,7 +6,7 @@ import bgImage from '../../assets/Europe.jpg';
 
 const IntroPage = () => {
   return (
-    <div className="relative min-h-screen pt-12 w-full flex items-center overflow-hidden font-Nunito">
+    <div id='intro' className="relative min-h-screen pt-24 w-full flex items-center overflow-hidden font-Nunito">
       
       {/* 1. Background Image with Research-Grade Overlay */}
       <div 

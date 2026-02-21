@@ -39,7 +39,8 @@ const StrategicImpact = () => {
   ];
 
   return (
-    <div className="bg-white min-h-screen pt-24 pb-20 font-Nunito">
+    <div id='strategic-impact' className="bg-white min-h-screen pt-12 pb-20 font-Nunito">
+          <h1 className="text-5xl font-black text-slate-800 tracking-tighter mb-6 text-center pb-6">Strategic Impact</h1>
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}

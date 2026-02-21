@@ -7,7 +7,7 @@ import Intro from './Intro'
 
 export default function Proposal() {
   return (
-    <div>
+    <div id='#proposal'>
         <Intro/>
         <EngineFlow/>
 

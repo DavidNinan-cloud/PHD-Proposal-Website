@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function CausalEngine() {
   return (
-    <div className="bg-white min-h-screen pt-20">
+    <div id='causal-engine-prop' className="bg-white min-h-screen pt-20">
       {/* Metrics Ribbon */}
       <div className="bg-[#003399] text-white py-4 px-8 flex justify-around border-b border-[#FFCC00]">
         <div className="text-center">

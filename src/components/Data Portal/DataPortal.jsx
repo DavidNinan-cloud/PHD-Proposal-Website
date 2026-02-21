@@ -13,7 +13,7 @@ const DataPortal = () => {
   ];
 
   return (
-    <div className="bg-[#fcfcfc] min-h-screen pt-12 pb-24 font-Nunito">
+    <div id='portal-main' className="bg-[#fcfcfc] min-h-screen pt-12 pb-24 font-Nunito">
       {/* 1. Header Section: Authority and Scope */}
       <header className="max-w-[1440px] mx-auto px-8 mb-8 border-b border-slate-200 pb-8 flex justify-between items-end">
         <div>

@@ -17,7 +17,7 @@ export default function CausalDataIngestion() {
   ];
 
   return (
-    <div className="bg-[#fcfcfc] min-h-screen pt-24 pb-12 font-Nunito">
+    <div id='layer1' className="bg-[#fcfcfc] min-h-screen pt-12 pb-12 font-Nunito">
       <div className="max-w-[1440px] mx-auto px-8">
         
         {/* Layer Header */}

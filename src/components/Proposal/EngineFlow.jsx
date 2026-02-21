@@ -37,7 +37,7 @@ const EngineFlow = () => {
   ];
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-24 pb-12 font-Nunito">
+    <div id='engine-flow' className="bg-slate-50 min-h-screen pt-12 pb-12 font-Nunito">
       <div className="max-w-7xl mx-auto px-6 text-center mb-16">
         <h2 className="text-[#003399] text-xl font-black uppercase tracking-[0.3em] mb-4">Core Methodology - Beyond Sentiment</h2>
         <h1 className="text-5xl font-black text-slate-800 tracking-tighter mb-6">Computational Pipeline Architecture</h1>
